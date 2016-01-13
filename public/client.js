@@ -20,7 +20,7 @@ client.on('newVote', function(votes){
 })
 
 client.on('confirmVote', function(vote){
-  confirmVote.innerText = 'Thanks for voting! You selected ' + vote
+  confirmVote.innerText = 'Thanks for voting! You selected ' + vote + '.'
 })
 
 for (var i=0; i < buttons.length; i++){

@@ -20,6 +20,8 @@ server.on('connection', function(socket){
   server.sockets.emit('usersConnected', server.engine.clientsCount)
 
   socket.emit('statusMessage', 'You have connected')
+  socket.emit('newVote', prettyVotes(votes))
+
 
   socket.on('message', function(channel, message){
     if (channel === 'voteCast'){
